@@ -52,24 +52,24 @@ If any of the conditions for logging in are not met, console.log an error messag
 Try changing the values of the variables to make sure your IF/ELSE conditional
 can handle all cases correctly */
 
-// const userName = "Joe";
-// const userAge = 18;
-// let userIsLoggedIn = false;
-// let userIsBlocked = false;
-// let userIsAdmin = false;
-// let goToPage = "";
+const userName = "Joe";
+const userAge = 18;
+let userIsLoggedIn = false;
+let userIsBlocked = false;
+let userIsAdmin = false;
+let goToPage = "";
 
-// if (userName === "Joe" && userAge >= 18) {
-//   userIsAdmin = true;
-//   gotopage = "/admin";
-//   console.log("Welcome glorious Leader");
-//   document.getElementById("assigned").innerHTML = "Welcome admin Joe";
-// } else if (userName && userAge >= 18 && !userIsBlocked) {
-//   goToPage = "/home";
-//   console.log("Please log in User");
-//   document.getElementById("assigned").innerHTML = "Please log in User";
-// } else {
-//   console.log("Ah ah ah you didn't say the magic word");
-//   document.getElementById("assigned").innerHTML =
-//     "Ah ah ah you didn't say the magic word";
-// }
+if (userName === "Joe" && userAge >= 18) {
+  userIsAdmin = true;
+  gotopage = "/admin";
+  console.log("Welcome glorious Leader");
+  document.getElementById("assigned").innerHTML = "Welcome admin Joe";
+} else if (userName && userAge >= 18 && !userIsBlocked) {
+  goToPage = "/home";
+  console.log("Please log in User");
+  document.getElementById("assigned").innerHTML = "Please log in User";
+} else {
+  console.log("Ah ah ah you didn't say the magic word");
+  document.getElementById("assigned").innerHTML =
+    "Ah ah ah you didn't say the magic word";
+}
