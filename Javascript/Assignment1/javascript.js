@@ -54,6 +54,9 @@ can handle all cases correctly */
 
 const userName = "Joe";
 const userAge = 18;
+const log = console.log;
+const log1 = console.log("Welcome glorious leader");
+const get = document.getElementById("").innerHTML;
 let userIsLoggedIn = false;
 let userIsBlocked = false;
 let userIsAdmin = false;
@@ -62,14 +65,13 @@ let goToPage = "";
 if (userName === "Joe" && userAge >= 18) {
   userIsAdmin = true;
   gotopage = "/admin";
-  console.log("Welcome glorious Leader");
-  document.getElementById("assigned").innerHTML = "Welcome admin Joe";
+  log;
+  get = "Welcome admin Joe";
 } else if (userName && userAge >= 18 && !userIsBlocked) {
   goToPage = "/home";
-  console.log("Please log in User");
-  document.getElementById("assigned").innerHTML = "Please log in User";
+  log("Please log in User");
+  get = "Please log in User";
 } else {
-  console.log("Ah ah ah you didn't say the magic word");
-  document.getElementById("assigned").innerHTML =
-    "Ah ah ah you didn't say the magic word";
+  log("Ah ah ah you didn't say the magic word");
+  get = "Ah ah ah you didn't say the magic word";
 }
