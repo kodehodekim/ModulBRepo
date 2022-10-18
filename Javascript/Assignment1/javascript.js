@@ -21,24 +21,26 @@ String, number, boolean, array
 You can choose what the actual content is.
 Try to use both the let and const keywords */
 
-// const user = "Redleader";
-// const uAge = "30";
-// const hiUser = "Do you copy";
-// const ask = " Red Three standing by";
-// const msgUser = hiUser + " " + user + "?" + ask + "!";
-// let redLeader = false;
+const user = "Redleader";
+const uAge = "30";
+const hiUser = "Do you copy";
+const ask = " Red Three standing by";
+const msgUser = hiUser + " " + user + "?" + ask + "!";
+let redLeader = false;
 
-// if (user != "" && user === "Redleader") {
-//   let redLeader = true;
-//   console.log(msgUser);
-// } else {
-//   console.log("Cut the chatter, Red 2. Accelerate to attack speed");
-// }
+if (user !== "" && user === "Redleader") {
+  let redLeader = true;
+  console.log(msgUser);
+} else {
+  console.log("Cut the chatter, Red 2. Accelerate to attack speed");
+}
 
 /* ASSIGNMENT 3
 
 Try out a few of the operators we looked at (+, -, /, *)
 as well as a few of the shorthand operators (++, --, +=, -=) */
+
+/* See assigment 2 and 4 :) */
 
 /* ASSIGNMENT 4
 
@@ -65,13 +67,15 @@ let goToPage = "";
 if (userName === "Joe" && userAge >= 18) {
   userIsAdmin = true;
   goToPage = "/admin";
-  log;
+  log1;
   get.innerText = "Hello Glorious Leader";
-} else if (userName && userAge >= 18 && !userIsBlocked) {
+} else if (userName !== "" && userAge >= 18 && !userIsBlocked) {
+  userIsLoggedIn = true;
+  get.innerText = "Please Log in User";
   goToPage = "/home";
   log("Please log in User");
-  get.innerText = "Please log in User";
 } else {
+  userIsBlocked = true;
   log("Ah ah ah you didn't say the magic word");
-  get = "Ah ah ah you didn't say the magic word";
+  get.innerText = "Ah ah ah you didn't say the magic word";
 }
