@@ -28,7 +28,7 @@ const ask = " Red Three standing by";
 const msgUser = hiUser + " " + user + "?" + ask + "!";
 let redLeader = false;
 
-if (user !== "" && user === "Redleader") {
+if (user != "" && user === "Redleader" && uAge >= 30) {
   let redLeader = true;
   console.log(msgUser);
 } else {
@@ -57,25 +57,28 @@ can handle all cases correctly */
 const userName = "Joe";
 const userAge = 18;
 const log = console.log;
-const log1 = console.log("Welcome glorious leader");
+const logUser = console.log("Please log in User");
+const logJoe = console.log("Welcome glorious leader");
+const logBlocked = console.log("Ah ah ah, you didn't say the magic word");
 const get = document.getElementById("assigned");
 let userIsLoggedIn = false;
 let userIsBlocked = false;
 let userIsAdmin = false;
 let goToPage = "";
 
-if (userName === "Joe" && userAge >= 18) {
-  userIsAdmin = true;
-  goToPage = "/admin";
-  log1;
-  get.innerText = "Hello Glorious Leader";
-} else if (userName !== "" && userAge >= 18 && !userIsBlocked) {
+if (userName && userAge >= 18 && !userIsBlocked) {
+  if (userIsAdmin) {
+    goToPage = "/admin";
+    get.innerText = "Hello Glorious Leader";
+    logJoe;
+  } else {
+    get.innerText = "Please log in User";
+    goToPage = "/home";
+    logUser;
+  }
   userIsLoggedIn = true;
-  get.innerText = "Please Log in User";
-  goToPage = "/home";
-  log("Please log in User");
 } else {
   userIsBlocked = true;
-  log("Ah ah ah you didn't say the magic word");
-  get.innerText = "Ah ah ah you didn't say the magic word";
+  get.innerText = "Ah ah ah, you didn't say the magic word.";
+  logBlocked;
 }
