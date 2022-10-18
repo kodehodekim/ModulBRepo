@@ -21,19 +21,19 @@ String, number, boolean, array
 You can choose what the actual content is.
 Try to use both the let and const keywords */
 
-const user = "Redleader";
-const uAge = "30";
-const hiUser = "Do you copy";
-const ask = " Red Three standing by";
-const msgUser = hiUser + " " + user + "?" + ask + "!";
-let redLeader = false;
+// const user = "Redleader";
+// const uAge = "30";
+// const hiUser = "Do you copy";
+// const ask = " Red Three standing by";
+// const msgUser = hiUser + " " + user + "?" + ask + "!";
+// let redLeader = false;
 
-if (user != "" && user === "Redleader") {
-  let redLeader = true;
-  console.log(msgUser);
-} else {
-  console.log("Cut the chatter, Red 2. Accelerate to attack speed");
-}
+// if (user != "" && user === "Redleader") {
+//   let redLeader = true;
+//   console.log(msgUser);
+// } else {
+//   console.log("Cut the chatter, Red 2. Accelerate to attack speed");
+// }
 
 /* ASSIGNMENT 3
 
@@ -56,7 +56,7 @@ const userName = "Joe";
 const userAge = 18;
 const log = console.log;
 const log1 = console.log("Welcome glorious leader");
-const get = document.getElementById("").innerHTML;
+const get = document.getElementById("assigned");
 let userIsLoggedIn = false;
 let userIsBlocked = false;
 let userIsAdmin = false;
@@ -64,13 +64,13 @@ let goToPage = "";
 
 if (userName === "Joe" && userAge >= 18) {
   userIsAdmin = true;
-  gotopage = "/admin";
+  goToPage = "/admin";
   log;
-  get = "Welcome admin Joe";
+  get.innerText = "Hello Glorious Leader";
 } else if (userName && userAge >= 18 && !userIsBlocked) {
   goToPage = "/home";
   log("Please log in User");
-  get = "Please log in User";
+  get.innerText = "Please log in User";
 } else {
   log("Ah ah ah you didn't say the magic word");
   get = "Ah ah ah you didn't say the magic word";
