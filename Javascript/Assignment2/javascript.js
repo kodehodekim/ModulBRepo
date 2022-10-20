@@ -30,7 +30,7 @@ Console log the function a few times to show that it's working.
 */
 
 let array = "i'm a little teapot short and stout";
-let up = array.toUpperCase();
+let 
 
 function upperCase() {
   return array.toUpperCase();
