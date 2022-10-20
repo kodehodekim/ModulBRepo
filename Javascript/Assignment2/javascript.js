@@ -2,7 +2,7 @@
 // Read the assignment text CAREFULLY
 
 /*
-1.
+1. CHECK
 
 Write a function that takes in a number as a parameter and returns
 "Odd" if the number received is an odd number and "Even" if the number
@@ -11,10 +11,13 @@ received is even. Use arrow function syntax.
 Console log the function call a few times with both even and odd numbers to
 show that it's working.
 */
+// const number = 4;
 
-function oddEven {
-
-}
+// if (number % 2 == 0) {
+//   console.log("The number is even, Steven!");
+// } else {
+//   console.log("The number is very odd, Odd!");
+// }
 
 /*
 2.
@@ -26,6 +29,14 @@ Example: console.log(yourFunction("this is cool")) should console log THIS IS CO
 Console log the function a few times to show that it's working.
 */
 
+let array = "i'm a little teapot short and stout";
+let up = array.toUpperCase();
+
+function upperCase() {
+  return array.toUpperCase();
+}
+
+console.log(upperCase());
 /*
 3.
 
@@ -47,7 +58,7 @@ Example console.log(yourFunction("Gunnar", 19)) should console log Good evening 
 Console log the function a few times to show that it's working.
 */
 
-let name = "Kim"
+// let name = "Kim";
 
 /*
 4.
@@ -59,7 +70,7 @@ Use string methods on the text variable to do the following:
 
  Console log each method used.
 */
-const text = "  Javascript is hard   ";
+// const text = "  Javascript is hard   ";
 
 /*
 5.
@@ -70,13 +81,13 @@ Use array methods to do the following:
  - Replace "Doctor Strange" with "Thanos"
  - Use the splice method to remove Thor and Hulk and add "Captain America"
 */
-const marvelHeroes = [
-	"Spider-Man",
-	"Thor",
-	"Hulk",
-	"Doctor Strange",
-	"Iron Man"
-];
+// const marvelHeroes = [
+//   "Spider-Man",
+//   "Thor",
+//   "Hulk",
+//   "Doctor Strange",
+//   "Iron Man",
+// ];
 
 /*
 5.
