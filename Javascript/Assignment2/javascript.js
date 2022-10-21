@@ -29,15 +29,17 @@ Example: console.log(yourFunction("this is cool")) should console log THIS IS CO
 Console log the function a few times to show that it's working.
 */
 
-let array = "i'm a little teapot short and stout";
-let 
+// let array = "i'm a little teapot short and stout";
 
-function upperCase() {
-  return array.toUpperCase();
-}
+// function upperCase() {
+//   return array.toUpperCase();
+// }
 
-console.log(upperCase());
+// console.log(upperCase());
 /*
+
+
+
 3.
 
 Write a function that takes in 2 parameters:
@@ -57,8 +59,6 @@ Use whichever function syntax you want.
 Example console.log(yourFunction("Gunnar", 19)) should console log Good evening Gunnar
 Console log the function a few times to show that it's working.
 */
-
-// let name = "Kim";
 
 /*
 4.
