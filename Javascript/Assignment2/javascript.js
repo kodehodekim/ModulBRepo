@@ -11,13 +11,13 @@ received is even. Use arrow function syntax.
 Console log the function call a few times with both even and odd numbers to
 show that it's working.
 */
-// const number = 4;
+const number = 19;
 
-// if (number % 2 == 0) {
-//   console.log("The number is even, Steven!");
-// } else {
-//   console.log("The number is very odd, Odd!");
-// }
+if (number % 2 == 0) {
+  console.log("The number is even, Steven!");
+} else {
+  console.log("The number is very odd, Odd!");
+}
 
 /*
 2.
@@ -29,13 +29,13 @@ Example: console.log(yourFunction("this is cool")) should console log THIS IS CO
 Console log the function a few times to show that it's working.
 */
 
-// let array = "i'm a little teapot short and stout";
+const array = "i'm a little teapot short and stout";
 
-// function upperCase() {
-//   return array.toUpperCase();
-// }
+function upperCase() {
+  return array.toUpperCase();
+}
 
-// console.log(upperCase());
+console.log(upperCase());
 /*
 
 
@@ -60,6 +60,22 @@ Example console.log(yourFunction("Gunnar", 19)) should console log Good evening 
 Console log the function a few times to show that it's working.
 */
 
+const name = "Glorious User";
+const timeOfDay = 12;
+const night = console.log('Good morning ${name}');    // Good morning (name received)" if the hour received is 6-12
+const morning = console.log('Good morning ${name}');  // Good morning (name received)" if the hour received is 6-12
+const day = console.log('Good day ${name}')           // Good day (name received)" if the hour received is 12-18
+const evening = console.log('Good evening ${name}')   // Good evening (name received)" if the hour received is 18-24
+const invalid = console.log('Invalid time, ${name}')  // Invalid time" if the hour received is greater than 24
+
+function greeting() {
+  timeOfDay < 6 ? night :
+  timeOfDay < 12 ? morning :
+  timeOfDay < 18 ? day :
+  timeOfDay < 24 ? evening :
+  timeOfDay > 24 ? invalid:
+}
+
 /*
 4.
 
@@ -70,8 +86,14 @@ Use string methods on the text variable to do the following:
 
  Console log each method used.
 */
-// const text = "  Javascript is hard   ";
+const text = "  Javascript is hard   ";
+const split = text.split(" ");
+const textArray = ["Javascript", "is", "hard", "fun", "amazing"];
 
+console.log(text.replace("hard", "FUNTIMES"));
+console.log(text.slice(2, 21));
+console.log(text.trim().split(" "));
+console.log(text.replace("hard", "FUNTIMES").trim().split(" "));
 /*
 5.
 
@@ -81,13 +103,27 @@ Use array methods to do the following:
  - Replace "Doctor Strange" with "Thanos"
  - Use the splice method to remove Thor and Hulk and add "Captain America"
 */
-// const marvelHeroes = [
-//   "Spider-Man",
-//   "Thor",
-//   "Hulk",
-//   "Doctor Strange",
-//   "Iron Man",
-// ];
+
+const marvelHeroes = [
+  "Spider-Man",
+  "Thor",
+  "Hulk",
+  "Doctor Strange",
+  "Iron Man",
+];
+// Add Groot into the array
+const pushHero = "Groot";
+marvelHeroes.push(pushHero);
+console.log(marvelHeroes);
+
+// Remove Spideywidey
+marvelHeroes.splice(marvelHeroes, 1);
+console.log(marvelHeroes);
+
+// Replace Doc Strange with Thanos
+marvelHeroes.splice(3, 1);
+marvelHeroes.push("Thanos");
+console.log(marvelHeroes);
 
 /*
 5.
