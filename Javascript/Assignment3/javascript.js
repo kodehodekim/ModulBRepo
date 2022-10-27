@@ -72,13 +72,15 @@ const people = [
     hobbies: ["design", "drawing", "css"],
   },
 ];
+
 const cities = ["New York", "London", "Paris", "Berlin", "Copenhagen", "Rome"];
 
 for (let i = 0; i < people.length; i++) {
-  people[i].city = cities[Math.floor(Math.random() * cities.length)];
-  const title = () =>
-    people[i].male ? (people[i].title = "Mr") : (people[i].title = "Ms");
-
-  people[i].hobbies.push("coding");
-  console.log(people[0]);
+  const p = people[i];
+  p.city = cities[Math.floor(Math.random() * cities.length)];
+  p.title = p.male ? "Mr" : "Ms";
+  p.age += 1;
+  p.hobbies.push("coding");
 }
+
+console.log(people);
