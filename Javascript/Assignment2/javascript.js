@@ -2,7 +2,7 @@
 // Read the assignment text CAREFULLY
 
 /*
-1. CHECK
+1.
 
 Write a function that takes in a number as a parameter and returns
 "Odd" if the number received is an odd number and "Even" if the number
@@ -11,13 +11,9 @@ received is even. Use arrow function syntax.
 Console log the function call a few times with both even and odd numbers to
 show that it's working.
 */
-const number = 19;
 
-if (number % 2 == 0) {
-  console.log("The number is even, Steven!");
-} else {
-  console.log("The number is very odd, Odd!");
-}
+const oddOrEven = (number) => (number % 2 === 0 ? "Even" : "Odd");
+console.log(oddOrEven(16));
 
 /*
 2.
@@ -29,17 +25,12 @@ Example: console.log(yourFunction("this is cool")) should console log THIS IS CO
 Console log the function a few times to show that it's working.
 */
 
-const array = "i'm a little teapot short and stout";
-
-function upperCase() {
-  return array.toUpperCase();
+function upperCase(string) {
+  return string.toUpperCase() + "!";
 }
+console.log(upperCase("i want to be uppercase when i grow up"));
 
-console.log(upperCase());
 /*
-
-
-
 3.
 
 Write a function that takes in 2 parameters:
@@ -60,22 +51,28 @@ Example console.log(yourFunction("Gunnar", 19)) should console log Good evening 
 Console log the function a few times to show that it's working.
 */
 
-const name = "Glorious User";
-const timeOfDay = 12;
-const night = console.log('Good morning ${name}');    // Good morning (name received)" if the hour received is 6-12
-const morning = console.log('Good morning ${name}');  // Good morning (name received)" if the hour received is 6-12
-const day = console.log('Good day ${name}')           // Good day (name received)" if the hour received is 12-18
-const evening = console.log('Good evening ${name}')   // Good evening (name received)" if the hour received is 18-24
-const invalid = console.log('Invalid time, ${name}')  // Invalid time" if the hour received is greater than 24
+const name = "Endre";
+const timeOfDay = 21;
+const night = `Good night ${name}`;
+const morning = `Good morning ${name}`;
+const day = `Good day ${name}`;
+const evening = `Good evening ${name}`;
+const invalid = `Invalid time, please come back from the future ${name}.`;
 
-function greeting() {
-  timeOfDay < 6 ? night :
-  timeOfDay < 12 ? morning :
-  timeOfDay < 18 ? day :
-  timeOfDay < 24 ? evening :
-  timeOfDay > 24 ? invalid:
-}
+const greeting = () =>
+  timeOfDay <= 6
+    ? night
+    : timeOfDay <= 12
+    ? morning
+    : timeOfDay <= 18
+    ? day
+    : timeOfDay <= 24
+    ? evening
+    : invalid;
 
+console.log(greeting());
+
+// I am master if ternary! (Not really, but learning! :) )
 /*
 4.
 
@@ -84,17 +81,22 @@ Use string methods on the text variable to do the following:
  - Remove the whitespace from the beginning and end of the string
  - Split the string into an array where each word is an element
 
- Console log each method used.
-*/
+ Console log each method used. */
+
 const text = "  Javascript is hard   ";
 const split = text.split(" ");
-const textArray = ["Javascript", "is", "hard", "fun", "amazing"];
 
 console.log(text.replace("hard", "FUNTIMES"));
 console.log(text.slice(2, 21));
 console.log(text.trim().split(" "));
+
+// // ALL TOGETHER NOW
 console.log(text.replace("hard", "FUNTIMES").trim().split(" "));
-/*
+// // This could also be :
+alt = text.replace("hard", "FUNTIMES").trim().split(" "));
+console.log(alt())
+
+/* 
 5.
 
 Use array methods to do the following:
@@ -103,7 +105,6 @@ Use array methods to do the following:
  - Replace "Doctor Strange" with "Thanos"
  - Use the splice method to remove Thor and Hulk and add "Captain America"
 */
-
 const marvelHeroes = [
   "Spider-Man",
   "Thor",
@@ -111,18 +112,24 @@ const marvelHeroes = [
   "Doctor Strange",
   "Iron Man",
 ];
-// Add Groot into the array
+//Add Groot into the array
 const pushHero = "Groot";
 marvelHeroes.push(pushHero);
 console.log(marvelHeroes);
 
-// Remove Spideywidey
+// // Remove Spideywidey
 marvelHeroes.splice(marvelHeroes, 1);
 console.log(marvelHeroes);
 
 // Replace Doc Strange with Thanos
-marvelHeroes.splice(3, 1);
-marvelHeroes.push("Thanos");
+// This needed some serious googling! But I hope this is satisfactory! :)
+const index = marvelHeroes.indexOf("Doctor Strange");
+marvelHeroes.splice(index, 1, "Thanos");
+console.log(marvelHeroes);
+
+// Remove Thor and Hulk, and replaced with Captain America
+const index = marvelHeroes.indexOf("Thor", "Hulk");
+marvelHeroes.splice(index, 2, "Captain America");
 console.log(marvelHeroes);
 
 /*
