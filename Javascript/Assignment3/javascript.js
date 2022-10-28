@@ -78,7 +78,7 @@ const cities = ["New York", "London", "Paris", "Berlin", "Copenhagen", "Rome"];
 for (let i = 0; i < people.length; i++) {
   const p = people[i];
   p.city = cities[Math.floor(Math.random() * cities.length)];
-  p.title = p.male ? "Mr" : "Ms";
+  p.title = p.male ? "Mr." : "Ms.";
   p.age += 1;
   p.hobbies.push("coding");
 }
