@@ -12,8 +12,8 @@ Console log the function call a few times with both even and odd numbers to
 show that it's working.
 */
 
-// const oddOrEven = (number) => (number % 2 === 0 ? "Even" : "Odd");
-// console.log(oddOrEven(16));
+const oddOrEven = (number) => (number % 2 === 0 ? "Even" : "Odd");
+console.log(oddOrEven(16));
 
 /*
 2.
@@ -25,10 +25,10 @@ Example: console.log(yourFunction("this is cool")) should console log THIS IS CO
 Console log the function a few times to show that it's working.
 */
 
-// function upperCase(string) {
-//   return string.toUpperCase() + "!";
-// }
-// console.log(upperCase("i want to be uppercase when i grow up"));
+function upperCase(string) {
+  return string.toUpperCase() + "!";
+}
+console.log(upperCase("i want to be uppercase when i grow up"));
 
 /*
 3.
@@ -51,26 +51,26 @@ Example console.log(yourFunction("Gunnar", 19)) should console log Good evening 
 Console log the function a few times to show that it's working.
 */
 
-// const name = "Endre";
-// const timeOfDay = 21;
-// const night = "Good night ${name}";
-// const morning = "Good morning ${name}";
-// const day = "Good day ${name}";
-// const evening = "Good evening ${name}";
-// const invalid = "Invalid time, please come back from the future ${name}.";
+const name = "Endre";
+const timeOfDay = 21;
+const night = "Good night ${name}";
+const morning = "Good morning ${name}";
+const day = "Good day ${name}";
+const evening = "Good evening ${name}";
+const invalid = "Invalid time, please come back from the future ${name}.";
 
-// const greeting = () =>
-//   timeOfDay <= 6
-//     ? night
-//     : timeOfDay <= 12
-//     ? morning
-//     : timeOfDay <= 18
-//     ? day
-//     : timeOfDay <= 24
-//     ? evening
-//     : invalid;
+const greeting = () =>
+  timeOfDay <= 6
+    ? night
+    : timeOfDay <= 12
+    ? morning
+    : timeOfDay <= 18
+    ? day
+    : timeOfDay <= 24
+    ? evening
+    : invalid;
 
-// console.log(greeting());
+console.log(greeting());
 
 // I am master if ternary! (Not really, but learning! :) )
 /*
@@ -83,18 +83,18 @@ Use string methods on the text variable to do the following:
 
  Console log each method used. */
 
-// const text = "  Javascript is hard   ";
-// const split = text.split(" ");
+const text = "  Javascript is hard   ";
+const split = text.split(" ");
 
-// console.log(text.replace("hard", "FUNTIMES"));
-// console.log(text.slice(2, 21));
-// console.log(text.trim().split(" "));
+console.log(text.replace("hard", "FUNTIMES"));
+console.log(text.slice(2, 21));
+console.log(text.trim().split(" "));
 
-// // // ALL TOGETHER NOW
-// console.log(text.replace("hard", "FUNTIMES").trim().split(" "));
-// // // This could also be :
-// alt = text.replace("hard", "FUNTIMES").trim().split(" "));
-// console.log(alt())
+// // ALL TOGETHER NOW
+console.log(text.replace("hard", "FUNTIMES").trim().split(" "));
+// // This could also be :
+alt = text.replace("hard", "FUNTIMES").trim().split(" "));
+console.log(alt())
 
 /* 
 5.
@@ -113,24 +113,24 @@ const marvelHeroes = [
   "Iron Man",
 ];
 //Add Groot into the array
-// const pushHero = "Groot";
-// marvelHeroes.push(pushHero);
-// console.log(marvelHeroes);
+const pushHero = "Groot";
+marvelHeroes.push(pushHero);
+console.log(marvelHeroes);
 
 // // // Remove Spideywidey
-// marvelHeroes.splice(marvelHeroes, 1);
-// console.log(marvelHeroes);
+marvelHeroes.splice(marvelHeroes, 1);
+console.log(marvelHeroes);
 
 // Replace Doc Strange with Thanos
 // This needed some serious googling! But I hope this is satisfactory! :)
-// const index = marvelHeroes.indexOf("Doctor Strange");
+const index = marvelHeroes.indexOf("Doctor Strange");
 marvelHeroes.splice(3, 1, "Thanos");
 console.log(marvelHeroes);
 
 // // Remove Thor and Hulk, and replaced with Captain America
-// const index = marvelHeroes.indexOf("Thor", "Hulk");
-// marvelHeroes.splice(index, 2, "Captain America");
-// console.log(marvelHeroes);
+const index = marvelHeroes.indexOf("Thor", "Hulk");
+marvelHeroes.splice(index, 2, "Captain America");
+console.log(marvelHeroes);
 
 /*
 5.
